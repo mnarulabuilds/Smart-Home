@@ -58,9 +58,14 @@ typings/
 # dotenv environment variables file
 .env
 
-# All json files
+# All json files (except package and tsconfig)
 *.json
 !package*
+!tsconfig*
+!*/tsconfig*
+dist/
+backend/dist/
+client/dist/
 
 # All rules
 *.rules

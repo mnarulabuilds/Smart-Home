@@ -1,0 +1,17 @@
+{
+  "name": "Smart Home IoT",
+  "short_name": "SmartHome",
+  "description": "Cross-Platform Smart Home IoT Monitoring & Control System",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233b82f6'><path d='M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z'/></svg>",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

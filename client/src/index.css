@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Modern Accessible Form Validation (guided by modern-web-guidance) */
+.field {
+  @apply mb-4;
+}
+
+.field label {
+  @apply block text-sm font-medium text-slate-300 mb-1;
+}
+
+.hint {
+  @apply block text-xs text-slate-400 mb-1.5;
+}
+
+.error-msg {
+  display: none;
+  @apply text-xs text-rose-400 mt-1.5 font-medium;
+}
+
+/* Only display error styling after user has interacted with the field */
+input:user-invalid,
+select:user-invalid {
+  @apply border-rose-500 bg-rose-950/20 text-rose-100 focus:ring-rose-500 focus:border-rose-500;
+}
+
+input:user-invalid + .error-msg {
+  display: block;
+}
+
+input:user-valid:not(:placeholder-shown) {
+  @apply border-emerald-500/80 bg-emerald-950/10;
+}
+
+/* Glassmorphism panels */
+.glass-panel {
+  @apply bg-slate-900/70 backdrop-blur-md border border-slate-800 rounded-2xl shadow-xl;
+}
+
+.glass-panel-hover {
+  @apply glass-panel transition-all duration-200 hover:border-slate-700 hover:shadow-2xl hover:bg-slate-900/80;
+}
+
+/* Pulse keyframe for radar/motion */
+@keyframes radar-pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 0.3; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.animate-radar {
+  animation: radar-pulse 2s infinite ease-in-out;
+}
